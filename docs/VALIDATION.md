@@ -1,6 +1,6 @@
 # Validation record
 
-Validated on 2026-10-01 in a Linux execution environment with Python 3.12.14.
+Reference outputs were validated on 2026-10-01 with Linux and Python 3.12.14.
 The numerical package versions are recorded in `requirements-tested.txt`:
 NumPy 2.3.5, pandas 2.2.3, SciPy 1.17.0, and Matplotlib 3.10.8.
 
@@ -47,12 +47,8 @@ versions.
 
 ## Verification limits
 
-- The initial local analysis used verified cached files and mocked HTTP
-  responses. Live CLI downloads were subsequently verified in GitHub Actions.
-- Local installation and tests used Python 3.12. GitHub Actions additionally
-  verified installation and the full test suite on Python 3.10 and 3.12.
-- A wheel was built, but a fresh dependency download and installation on the
-  user's physical Pixel Chromebook have not been performed.
+- Automated end-to-end checks cover Linux with Python 3.10 and 3.12. Other
+  operating systems and Python versions are not covered by the current CI matrix.
 - No LiON checkpoint was executed. These are evaluations of supplied public
   predictions, not independently generated model outputs.
 - No original-study curation has been completed for the 69 candidates. No
@@ -72,5 +68,5 @@ Both jobs successfully completed:
 4. Benchmark tables and figures via `lnpdb-hhes benchmark`.
 5. Formulation candidate generation via `lnpdb-hhes candidates`.
 
-The 39 uploaded file blobs were also compared with the prepared local files;
-every Git blob hash matched before this documentation update.
+Passing software checks does not establish biological efficacy or applicability
+to a new experimental setting. See [RESULTS.md](RESULTS.md) for interpretation.

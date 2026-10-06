@@ -55,10 +55,15 @@ Full numeric outputs: [public audit](reports/public_snapshot/README.md),
 [candidate summary](reports/candidates/summary.json), and
 [strict comparison summary](reports/helper_cholesterol/summary.json).
 
+Read [Interpreting the results](docs/RESULTS.md) for what the metrics, candidate
+counts, and coverage gaps establish.
+
 ## Quick start
 
 Requires Python **3.10 or newer**, with no GPU, PyTorch, Chemprop, RDKit, or conda
-required for this release. See the [Chromebook guide](docs/CHROMEBOOK.md).
+required for this release. The commands below use a POSIX shell; on Windows,
+create the environment with `python -m venv .venv` and activate it with
+`.venv\Scripts\Activate.ps1` in PowerShell.
 
 Clone the repository, then create an isolated environment:
 
@@ -84,8 +89,9 @@ by Git. Once the cache is available, analysis runs offline.
 `python -m lnpdb_hhes` is equivalent to `lnpdb-hhes`. Use `--help` for arguments.
 For a damaged cache, run `lnpdb-hhes fetch --refresh`; do not edit the source CSVs.
 
-See the [validation record](docs/VALIDATION.md) for the tested environment,
-commands, and limits of verification.
+See [Usage and output files](docs/USAGE.md) for command options, output paths,
+and troubleshooting, and the [validation record](docs/VALIDATION.md) for tested
+environments and reproducibility checks.
 
 ## Review before evaluating formulation comparisons
 
@@ -135,8 +141,8 @@ staging of `data/private/` and FCS files; review staged files before publishing.
   claim. Correlations for fewer than three rows are suppressed.
 - Post hoc subsets used to guide model changes become development data. A new
   claim of improvement needs an evaluation set kept separate from that work.
-- One future HHES mRNA formulation is a case study, not evidence of mRNA-to-pDNA
-  transfer performance. Reporter expression alone does not establish knock-in.
+- Cross-cargo prediction claims require comparable experimental designs and
+  held-out evaluation cases. Reporter expression alone does not establish knock-in.
 
 ## Project map
 
@@ -146,7 +152,7 @@ staging of `data/private/` and FCS files; review staged files before publishing.
 | `src/lnpdb_hhes/snapshot.json` | Immutable source URLs, hashes, and exact feature order |
 | `tests/` | Synthetic edge cases and public-snapshot regression checks |
 | `reports/` | Reproducible public results and SVG figures |
-| `docs/` | Methods, Chromebook setup, lab schema, validation, next steps |
+| `docs/` | Usage, result interpretation, methods, lab schema, validation, roadmap |
 | `third_party/` | Upstream LNPDB license |
 
 ## Roadmap
@@ -158,7 +164,7 @@ staging of `data/private/` and FCS files; review staged files before publishing.
 5. Optionally compare AGILE on the same evaluation target; treat Martini MD as a
    separate, later mechanistic study.
 
-See [ROADMAP.md](docs/ROADMAP.md) for the thesis connection and acceptance criteria.
+See [ROADMAP.md](docs/ROADMAP.md) for implementation milestones and evaluation requirements.
 
 ## Attribution
 

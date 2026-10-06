@@ -30,21 +30,17 @@ used only to test evaluator behavior.
   reference pools. Do not report an uncalibrated similarity score as probability.
 - Add pre-existing whole-study-held-out results and compare compatible targets.
 
-## Thesis connection
+## Experimental case-study integration
 
-A suitable undergraduate thesis can combine experimental HHES formulation
-comparison, a reproducible public-model analysis, and a discussion of which
-parts of the public evidence apply to the local experiment.
-
-The local experimental section should retain batch-specific QC and consistent
-FACS definitions. The computational section can report reproducibility,
-coverage, and source-reviewed composition comparisons. Disagreement or limited
-applicability is a valid finding when its basis is documented.
-
-Two local formulations support an exploratory case comparison; they do not
-validate an optimum or robust predictive accuracy. A future mRNA sample adds a
-case, and multiple independent batches add replication. Neither alone creates a
-large multi-formulation dataset or establishes transfer to pDNA.
+- Link permitted experimental records to explicit chemical, batch, assay, and
+  readout metadata; retain original QC and measurement scales.
+- Define which public comparisons match the intended experimental question and
+  record mismatches in cargo, model system, timing, or formulation context.
+- Verify the input adapter and checkpoint execution before adding custom HHES
+  predictions. Metadata completeness alone is not scientific validation.
+- Evaluate held-out formulations and report independent manufacturing batches
+  separately from technical measurements. Limited formulation coverage supports
+  exploratory case comparisons, not an optimum or a cross-cargo accuracy claim.
 
 ## Optional later work
 
