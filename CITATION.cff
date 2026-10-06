@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the source LNPDB paper for its data and models, and this repository for the analysis workflow."
+title: "LNPDB-HHES Benchmark"
+type: software
+version: 0.1.0
+date-released: 2026-10-06
+repository-code: "https://github.com/ju2501/lnpdb-hhes-benchmark"
+authors:
+  - name: ju2501
+license: MIT

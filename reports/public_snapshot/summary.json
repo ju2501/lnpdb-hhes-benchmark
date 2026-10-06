@@ -1,0 +1,13 @@
+{
+  "source_commit": "fc7c38933b445eb54985014f2b8917606462eec1",
+  "evaluation": "published_single_split_predictions",
+  "model_executed": false,
+  "overall": {
+    "n_rows": 2164,
+    "rmse": 0.9119330517639239,
+    "pearson": 0.48187595790197846,
+    "spearman": 0.44423592221839653,
+    "correlation_status": "available"
+  },
+  "scope": "Retrospective test-subset analysis; not whole-database coverage or new external validation."
+}

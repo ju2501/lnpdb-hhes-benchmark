@@ -1,0 +1,6 @@
+# Exact analysis versions tested with Python 3.12.14 on Linux.
+# For other supported Python versions, install from pyproject.toml instead.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+matplotlib==3.10.8

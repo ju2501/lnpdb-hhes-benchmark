@@ -1,0 +1,13 @@
+{
+  "source_commit": "fc7c38933b445eb54985014f2b8917606462eec1",
+  "vary": "all",
+  "n_candidate_groups": 69,
+  "n_candidate_rows": 213,
+  "n_unique_il_smiles": 15,
+  "groups_by_experiment": {
+    "JW_2024": 69
+  },
+  "review_status": "unreviewed_candidates",
+  "matching": "Exact values in supplied feature columns; assay and time must be reviewed separately.",
+  "scope": "This pinned test subset only. Groups are not independent experiments."
+}

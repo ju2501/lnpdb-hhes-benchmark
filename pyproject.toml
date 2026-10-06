@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lnpdb-hhes-benchmark"
+version = "0.1.0"
+description = "Reproducible LiON prediction audits and formulation-comparison curation for LNPDB"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.26,<3", "pandas>=2.2,<3", "scipy>=1.12,<2", "matplotlib>=3.8,<4"]
+
+[project.scripts]
+lnpdb-hhes = "lnpdb_hhes.cli:main"
+
+[project.urls]
+Repository = "https://github.com/ju2501/lnpdb-hhes-benchmark"
+Issues = "https://github.com/ju2501/lnpdb-hhes-benchmark/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+lnpdb_hhes = ["*.json"]

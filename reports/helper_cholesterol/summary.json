@@ -1,0 +1,11 @@
+{
+  "source_commit": "fc7c38933b445eb54985014f2b8917606462eec1",
+  "vary": "helper-cholesterol",
+  "n_candidate_groups": 0,
+  "n_candidate_rows": 0,
+  "n_unique_il_smiles": 0,
+  "groups_by_experiment": {},
+  "review_status": "unreviewed_candidates",
+  "matching": "Exact values in supplied feature columns; assay and time must be reviewed separately.",
+  "scope": "This pinned test subset only. Groups are not independent experiments."
+}
