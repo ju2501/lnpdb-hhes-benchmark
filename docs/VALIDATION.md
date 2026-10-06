@@ -47,11 +47,10 @@ versions.
 
 ## Verification limits
 
-- The analysis used a verified local copy of the public files. First-download
-  behavior was tested with mocked HTTP responses; a live download through the
-  CLI was not verified because this execution environment restricts that host.
-- Installation and tests used Python 3.12. Python 3.10 and 3.12 are configured
-  in GitHub Actions, but remote CI has not run before the initial upload.
+- The initial local analysis used verified cached files and mocked HTTP
+  responses. Live CLI downloads were subsequently verified in GitHub Actions.
+- Local installation and tests used Python 3.12. GitHub Actions additionally
+  verified installation and the full test suite on Python 3.10 and 3.12.
 - A wheel was built, but a fresh dependency download and installation on the
   user's physical Pixel Chromebook have not been performed.
 - No LiON checkpoint was executed. These are evaluations of supplied public
@@ -59,3 +58,19 @@ versions.
 - No original-study curation has been completed for the 69 candidates. No
   curated biological performance score is claimed.
 - No HHES experimental records or efficacy predictions are included.
+
+## GitHub Actions verification
+
+On 2026-10-06, [workflow run 37422513951](https://github.com/ju2501/lnpdb-hhes-benchmark/actions/runs/37422513951)
+passed on both Python 3.10 and Python 3.12 for
+[commit 97721a7](https://github.com/ju2501/lnpdb-hhes-benchmark/commit/97721a779ff366c1a8932449ec75e0176273d6ce).
+Both jobs successfully completed:
+
+1. A fresh editable installation with dependencies.
+2. Live download and hash verification of all four pinned source CSVs.
+3. The 30-test suite, including the three public-snapshot regression checks.
+4. Benchmark tables and figures via `lnpdb-hhes benchmark`.
+5. Formulation candidate generation via `lnpdb-hhes candidates`.
+
+The 39 uploaded file blobs were also compared with the prepared local files;
+every Git blob hash matched before this documentation update.
